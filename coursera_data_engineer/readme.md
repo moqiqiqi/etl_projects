@@ -1,14 +1,19 @@
-## ETL Project: Extracting Countries by GDP from IMF Data
+## ETL Project: Top 10 Largest Banks by Market Capitalization
 #### Project Overview
-This project involves building an automated ETL (Extract, Transform, Load) script to extract and process a list of countries by their GDP (in billion USD) from the International Monetary Fund (IMF) website.  
-Since the IMF releases this information biannually, this code is designed to be reused whenever new data becomes available.
+This project involves building an automated ETL (Extract, Transform, Load) pipeline to extract and process the list of the top 10 largest banks in the world ranked by market capitalization from a given webpage.  
+Additionally, the market capitalization (MC) values will be converted into multiple currencies (USD, GBP, EUR, and INR) based on exchange rates provided in a CSV file named exchange_rate.csv.
 
-The script will:
+The final data will be:  
+Saved as a CSV file (Largest_banks_data.csv) for local storage.  
+Loaded into a SQLite database (Banks.db) with a table named Largest_banks for querying.  
+Queries will be performed to extract the market capitalization in different currencies for specific country offices.  
+Additionally, the script will log the process execution in a file named code_log.txt.
 
-Extract GDP data of countries from the IMF webpage.<br>
-Transform the data.<br>
-Load the transformed data into:<br>
-A JSON file (Countries_by_GDP.json).<br>
-A SQLite database table (Countries_by_GDP) in a database file named World_Economies.db.<br>
-Additionally, the script will log the process execution in a file named etl_project_log.txt.
-
+Key Features
+Data Extraction: The script extracts the list of the top 10 largest banks by market capitalization from the webpage.<br>
+Data Transformation: The script transforms the data by converting the market capitalization values into GBP, EUR, and INR based on the exchange rate provided in a CSV file. All values are rounded to 2 decimal places.<br>
+Data Loading:   
+CSV: The transformed data is saved as a CSV file.   
+SQLite Database: The transformed data is also loaded into a SQLite database table.
+Database Queries: The script can run specific queries to extract market capitalization for different offices (London, Berlin, and New Delhi).  
+Logging: Each step of the process is logged to ensure transparency and debugging capabilities.
