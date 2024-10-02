@@ -1,15 +1,15 @@
 ## ETL Project: Top 10 Largest Banks by Market Capitalization
-#### Project Overview
+**Project Overview**
 This project involves building an automated ETL (Extract, Transform, Load) pipeline to extract and process the list of the top 10 largest banks in the world ranked by market capitalization from a given webpage.  
 Additionally, the market capitalization (MC) values will be converted into multiple currencies (USD, GBP, EUR, and INR) based on exchange rates provided in a CSV file named exchange_rate.csv.
 
-The final data will be:  
+**The final data will be:**  
 Saved as a CSV file (Largest_banks_data.csv) for local storage.  
 Loaded into a SQLite database (Banks.db) with a table named Largest_banks for querying.  
 Queries will be performed to extract the market capitalization in different currencies for specific country offices.  
 Additionally, the script will log the process execution in a file named code_log.txt.
 
-Key Features
+**Key Features**  
 Data Extraction: The script extracts the list of the top 10 largest banks by market capitalization from the webpage.<br>
 Data Transformation: The script transforms the data by converting the market capitalization values into GBP, EUR, and INR based on the exchange rate provided in a CSV file. All values are rounded to 2 decimal places.<br>
 Data Loading:   
