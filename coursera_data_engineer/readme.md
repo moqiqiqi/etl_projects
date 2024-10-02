@@ -14,6 +14,6 @@ Additionally, the script will log the process execution in a file named code_log
 ***Data Transformation***: The script transforms the data by converting the market capitalization values into GBP, EUR, and INR based on the exchange rate provided in a CSV file. All values are rounded to 2 decimal places.<br>
 ***Data Loading***:   
 CSV: The transformed data is saved as a CSV file.   
-SQLite Database: The transformed data is also loaded into a SQLite database table.
+SQLite Database: The transformed data is also loaded into a SQLite database table.<br>
 ***Database Queries***: The script can run specific queries to extract market capitalization for different offices (London, Berlin, and New Delhi).  
 ***Logging***: Each step of the process is logged to ensure transparency and debugging capabilities.
